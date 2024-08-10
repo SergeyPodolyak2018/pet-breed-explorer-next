@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import styles from '@/app/breed/cats/[id]/page.module.css';
 import InfoCard from '@/app/ui/infoCard';
-import { BREED_FIEDLS } from '@/app/lib/const';
+import { UNIT_FIELDS } from '@/app/lib/const';
 
 export const metadata: Metadata = {
   title: 'Person data agregation',
@@ -22,7 +22,7 @@ export default async function Page({ params }: { params: { id: string } }) {
     <div className={styles.container}>
       <InfoCard
         data={data}
-        fields={BREED_FIEDLS[data.data.type]}
+        fields={UNIT_FIELDS[data.data.type]}
       />
     </div>
   );
