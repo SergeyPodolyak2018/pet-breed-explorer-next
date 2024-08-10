@@ -8,8 +8,11 @@ export default function InfoCard<
   return (
     <div className='container mx-auto px-5 py-2 lg:px-32 lg:pt-12'>
       <div className='-m-1 flex flex-wrap md:-m-2'>
-        {props.data.images.map((el) => (
-          <div className='flex w-1/3 flex-wrap'>
+        {props.data.images.map((el, index) => (
+          <div
+            key={index}
+            className='flex w-1/3 flex-wrap'
+          >
             <div className='w-full p-1 md:p-2'>
               <img
                 alt='gallery'
@@ -49,7 +52,10 @@ export default function InfoCard<
                     ) {
                       if (props.data.data.hasOwnProperty(el)) {
                         return (
-                          <tr className='border-b border-neutral-200 dark:border-white/10'>
+                          <tr
+                            key={index}
+                            className='border-b border-neutral-200 dark:border-white/10'
+                          >
                             <td className='whitespace-nowrap px-6 py-4'>
                               {el}
                             </td>
