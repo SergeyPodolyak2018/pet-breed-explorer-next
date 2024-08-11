@@ -3,7 +3,10 @@ import styles from '@/app/breed/layout.module.css';
 export default function Loading() {
   return (
     <div className={styles.wrapper}>
-      <div className='flex items-center justify-center'>
+      <div
+        className='flex items-center justify-center'
+        style={{ height: '100%', width: '100%' }}
+      >
         <div
           className='inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white'
           role='status'
